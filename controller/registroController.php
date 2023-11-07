@@ -4,11 +4,6 @@ require_once("../connection/Connection.php");
 
 try {
   
-
-        // Crear una nueva conexión PDO
-        // $dbh = new PDO($dsn, $username, $password);
-    
-        // Preparar la declaración de inserción
         $stmt = $pdo->prepare("INSERT INTO users (id, username, mail, pass, description) 
                                VALUES (null, :username, :mail, :pass, :description)");
     
@@ -29,8 +24,6 @@ try {
     
         echo ("Registro insertado correctamente.");
         header("Location: ../view/RegistroView.php");
-        require("../view/LoginView.php");
-   
 
 } catch (PDOException $e) {
     echo "Error al insertar el registro: " . $e->getMessage();

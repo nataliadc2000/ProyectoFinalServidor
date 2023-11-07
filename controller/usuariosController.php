@@ -8,6 +8,6 @@ $results = selectUsuarios($pdo);
 
 $pdo = null;
 
-header("./view/LoginView.php");
+header("./view/UsuariosView.php");
 
 ?>

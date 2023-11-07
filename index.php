@@ -1,5 +1,4 @@
 
-
 <?php 
 require_once("./controller/usuariosController.php");
 ?>
@@ -40,6 +39,23 @@ require_once("./controller/usuariosController.php");
  <body>
  
 
+<div class="container-fluid d-flex justify-content-center pt-5" id="subBody" style="min-height: 90vh;">
+
+<form action="../controller/usuariosController">
+<?php foreach($results as $user): ?>
+    <?php 
+        setcookie("username",$user->username,time ()+ 60*60*24*30,"/");
+    ?>
+     <nav class="navbar navbar navbar-dark bg-info" style="height: 10vh;"> 
+    <a class="navbar-brand mx-2">Bienvenido a la pagina <?= $user->username ?></a> 
+    <form class="form-inline" action="../errors/logout.php">
+           <input class="btn btn-primary btn-lg" type="submit" value="LOGOUT">
+   </form> 
+</nav>
+<?php endforeach ?>
+</form>
+
+
+
  </body>
  </html>
-    
