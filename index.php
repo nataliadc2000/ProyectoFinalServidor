@@ -39,7 +39,7 @@ require_once("./controller/usuariosController.php");
  <body>
  
 
-<div class="container-fluid d-flex justify-content-center pt-5" id="subBody" style="min-height: 90vh;">
+
 
 <form action="../controller/usuariosController">
 <?php foreach($results as $user): ?>
