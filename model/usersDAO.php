@@ -1,7 +1,7 @@
 
 <?php 
-require_once("./connection/Connection.php");
-require("./model/users.php");
+require_once("../connection/Connection.php");
+require("../model/users.php");
 
 function selectUsuarios($pdo) {
     try {
