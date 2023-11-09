@@ -12,7 +12,7 @@ try {
     $bd = "pageWeb";
 
     $pdo = connection($host, $user, $pass, $bd);
-    // session_start();
+    session_start();
     
 }  catch (PDOException $e) {
     header("Location: ../errors/Error.php");

@@ -54,16 +54,14 @@ require_once("./controller/usuariosController.php");
 </nav>
 <?php endforeach ?>
 </form>
-<button onclick="location.href='?categoria=Boton1'" onclick="perifericosSelect()">Periféricos</button>
-<button onclick="location.href='?categoria=Boton2'" onclick="partsSelect()">Parts of the Computer</button>
+
 
 <form action="../controller/productController.php">
 
     <?php foreach($results as $product): ?>
-    <!-- Aquí puedes mostrar los detalles del producto -->
-    <h2><?php echo $product->nameProduct; ?></h2>
-    <p><?php echo $product->descriptionProduct; ?></p>
-    <p>Precio: <?php echo $product->priceProduct; ?></p>
+    <h2><?= $product->nameProduct; ?></h2>
+    <p><?= $product->descriptionProduct; ?></p>
+    <p>Precio: <?= $product->priceProduct; ?></p>
 <?php endforeach; ?>
 </form>
 

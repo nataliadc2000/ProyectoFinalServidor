@@ -1,6 +1,6 @@
 
 <?php 
-require_once("./controller/usuariosController.php");
+require_once("../controller/usuariosController.php");
 ?>
 
 <!DOCTYPE html>
@@ -41,32 +41,18 @@ require_once("./controller/usuariosController.php");
 
 
 
-<form action="../controller/usuariosController.php">
-<?php foreach($results as $user): ?>
-    <?php 
-        setcookie("username",$user->username,time ()+ 60*60*24*30,"/");
-    ?>
-     <nav class="navbar navbar navbar-dark bg-info" style="height: 10vh;"> 
-    <a class="navbar-brand mx-2">Bienvenido a la pagina <?= $user->username ?></a> 
-    <form class="form-inline" action="../errors/logout.php">
-           <input class="btn btn-primary btn-lg" type="submit" value="LOGOUT">
-   </form> 
-</nav>
-<?php endforeach ?>
-</form>
+
 
 <form action="../controller/productController.php">
-    <button onclick="location.href='?categoria=Boton1'" onclick="perifericosSelect()">Periféricos</button>
-    <button onclick="location.href='?categoria=Boton2'" onclick="partsSelect()">Parts of the Computer</button>
 
-    <?php foreach($results as $product): ?>
-    <!-- Aquí puedes mostrar los detalles del producto -->
-    <h2><?php echo $product->nameProduct; ?></h2>
-    <p><?php echo $product->descriptionProduct; ?></p>
-    <p>Precio: <?php echo $product->priceProduct; ?></p>
-<?php endforeach; ?>
+<button onclick="location.href='?categoria=Boton1';">Periféricos</button>
+    <button onclick="location.href='?categoria=Boton2';">Parts of the Computer</button>
+    <button onclick="location.href='?categoria=Boton3';">Teclas</button>
 </form>
 
+
+ </body>
+ </html>
 
  </body>
  </html>
